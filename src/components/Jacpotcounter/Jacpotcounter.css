@@ -1,0 +1,39 @@
+.Jacpotcounter__nums {
+  display: flex;
+  align-items: flex-end;
+  margin: 0px;
+}
+
+.Jacpotcounter__nums__digit {
+  font-size: 20px;
+  padding: 6px 7px 4px 8px;
+  color: #d6d9d9 !important;
+  background-color: #505081 !important;
+  border-radius: 3px !important;
+  margin-left: 3px;
+}
+
+.Jacpotcounter__nums__digits__small {
+  font-size: 16px;
+  color: #9aaacf !important;
+  background-color: #40406d !important;
+  border-radius: 3px !important;
+  margin-left: 3px;
+  padding: 6px 7px 4px 7px;
+}
+
+.Jacpotcounter__nums__digits__dot {
+  color: #505081;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 1;
+}
+
+.Jacpotcounter__title {
+  font-size: 15px;
+  color: #98aac2;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 9px;
+  margin-left: 12px;
+}
