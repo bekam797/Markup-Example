@@ -1,11 +1,12 @@
 import React from 'react';
 import Layout from './Layout/Layout';
+import Main from './containers/Main/Main';
 
 function App() {
   return (
     <div className="App">
       <Layout>
-        <h1>Hello</h1>
+        <Main />
       </Layout>
     </div>
   );

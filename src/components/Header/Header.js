@@ -39,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
     cursor: 'pointer',
     color: '#AFBBC4',
   },
+  toolbar: {
+    padding: '0',
+  },
 }));
 
 function Header() {
@@ -48,7 +51,7 @@ function Header() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.header}>
         <Container className={classes.containerWidth}>
-          <Toolbar variant="dense">
+          <Toolbar variant="dense" className={classes.toolbar}>
             <Grid container item xs={5}>
               <Icons iconType="logo" />
             </Grid>
