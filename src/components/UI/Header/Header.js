@@ -10,8 +10,8 @@ import ZoomOutMapIcon from '@material-ui/icons/ZoomOutMap';
 import AppsIcon from '@material-ui/icons/Apps';
 import SettingsIcon from '@material-ui/icons/Settings';
 
-import Icons from '../Icons/Icons';
-import JacpotCounter from '../Jacpotcounter/Jacpotcounter';
+import Icons from '../../Icons/Icons';
+import JacpotCounter from '../../Jacpotcounter/Jacpotcounter';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,7 +79,6 @@ function Header() {
                 item
                 xs={6}
                 alignItems="center"
-                // justify="flex-end"
                 justify="space-between"
               >
                 <VolumeUpIcon className={classes.pointer} />

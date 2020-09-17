@@ -61,7 +61,7 @@ const Modal = (props) => {
         onClose={props.handleClose}
         aria-labelledby="customized-dialog-title"
         open={props.open}
-        maxWidth="false"
+        maxWidth="lg"
       >
         <DialogTitle id="customized-dialog-title" onClose={props.handleClose}>
           ისტორია
