@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
 import Icons from '../../Icons/Icons';
-import Modal from '../../Modal/Modal';
+import Modal from '../../UI/Modal/Modal';
 import BonusHistory from '../../BonusHistory/BonusHistory';
 
 const useStyles = makeStyles({

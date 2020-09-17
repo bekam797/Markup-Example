@@ -73,9 +73,12 @@ const useStyles = makeStyles({
     margin: 'auto',
     marginTop: '14px',
   },
+  iconWidth: {
+    width: '23px',
+  },
 });
 
-const GameCard = () => {
+const GameCard = (props) => {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
@@ -95,10 +98,10 @@ const GameCard = () => {
           <Typography variant="h5" component="h2">
             <Box>
               <Box component="span" m={1}>
-                <Icons className={classes.icon} iconType="online" />
+                <Icons iconStyle={classes.iconWidth} iconType="online" />
               </Box>
               <Box component="span" m={1}>
-                <Icons iconType="online" />
+                <Icons iconStyle={classes.iconWidth} iconType="online" />
               </Box>
               <Box component="span" m={1}>
                 <Icons iconType="offline" />
@@ -120,6 +123,8 @@ const GameCard = () => {
           size="large"
           disableElevation
           className={classes.button}
+          onClick={props.handleClick}
+          registered={props.registerd}
         >
           რეგისტრაცია
         </Button>
