@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'Firago';
+  src: url('./assets//fonts/FiraGO-Regular.woff');
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Firago', Helvetica, sans-serif;
 }
 
 body {
