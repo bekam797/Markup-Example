@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     gridTemplateColumns: 'repeat(2,233px)',
     gridColumnGap: '20px',
     justifyContent: 'center',
-    marginTop: '25px',
+    marginTop: '16px',
   },
   carttitle: {
     position: 'absolute',

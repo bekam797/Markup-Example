@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
   },
   root: {
-    width: '585px',
+    width: '621px',
+    maxHeight: '341px',
     backgroundColor: '#198a9c',
     color: '#fff',
     borderRadius: '6px',
@@ -101,7 +102,7 @@ const Main = () => {
         <Grid
           container
           item
-          xs={4}
+          xs={3}
           height="100%"
           className={classes.gridheight}
         >

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#ffffff',
     marginRight: '10px',
     boxShadow: 'none',
-    marginTop: '40px',
+    marginTop: '25px',
   },
   selectedTab: {
     color: '#6D728E',

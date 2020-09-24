@@ -52,7 +52,7 @@ function Header() {
       <AppBar position="static" className={classes.header}>
         <Container className={classes.containerWidth}>
           <Toolbar variant="dense" className={classes.toolbar}>
-            <Grid container item xs={5}>
+            <Grid container item xs={4}>
               <Icons iconType="logo" />
             </Grid>
             <Grid container item xs={12} spacing={3}>
@@ -63,7 +63,7 @@ function Header() {
                 <JacpotCounter />
               </Grid>
             </Grid>
-            <Grid container item xs={6} spacing={3}>
+            <Grid container item xs={5} spacing={10}>
               <Grid item>
                 <Button
                   variant="contained"

@@ -12,8 +12,8 @@ import Icons from '../../Icons/Icons';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 287,
-    width: '287px',
+    width: '100%',
+    maxHeight: '341px',
     backgroundColor: '#5F39B7',
     color: '#fff',
     borderRadius: '6px',
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     color: '#fff',
   },
   pos: {
-    marginBottom: 6,
+    marginBottom: '20px',
     color: '#fff',
   },
   line: {
@@ -56,9 +56,11 @@ const useStyles = makeStyles({
     },
   },
   prize: {
+    height: '65px',
     fontSize: '60px',
     color: '#fff',
     fontWeight: 'bold',
+    marginLeft: '30px',
   },
   prizeValue: {
     fontSize: '20px',
@@ -71,7 +73,7 @@ const useStyles = makeStyles({
     color: 'black',
     width: '113px',
     margin: 'auto',
-    marginTop: '14px',
+    marginTop: '20px',
   },
   iconWidth: {
     width: '23px',
@@ -84,18 +86,19 @@ const GameCard = (props) => {
 
   return (
     <Card className={classes.root} variant="outlined">
-      <CardContent>
+      <CardContent style={{ padding: '14px', paddingBottom: '12px' }}>
         <Typography className={classes.title}>5 კაციანი</Typography>
         <Typography className={classes.line}></Typography>
         {bull}
         <Grid item className={classes.center}>
           <Typography className={classes.prize} variant="h5" component="h2">
-            5000 <span className={classes.prizeValue}>GEL</span>
+            <span>5000</span>
+            <span className={classes.prizeValue}>GEL</span>
           </Typography>
           <Typography className={classes.pos} color="textSecondary">
             მაქს. მოგება
           </Typography>
-          <Typography variant="h5" component="h2">
+          <Typography variant="h5" component="h2" style={{ height: '23px' }}>
             <Box>
               <Box component="span" m={1}>
                 <Icons iconStyle={classes.iconWidth} iconType="online" />
