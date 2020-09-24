@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 
 import Icons from '../../Icons/Icons';
 import cardImg from '../../../assets/img/xmas.png';
+import AnimatedLine from '../../UI/AnimatedLine/AnimatedLine';
 
 const useStyles = makeStyles({
   cardhead: {
@@ -94,6 +95,17 @@ const useStyles = makeStyles({
       backgroundColor: '#2DBFB5',
     },
   },
+  closeButton: {
+    backgroundColor: '#1A6F7D',
+    color: '#fff',
+    fontSize: '19px',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    padding: '15px 27px',
+    '&:hover': {
+      backgroundColor: '#257f8e',
+    },
+  },
   prize: {
     fontSize: '40px',
     color: '#fff',
@@ -114,11 +126,147 @@ const useStyles = makeStyles({
     width: '30px',
     height: '30px',
   },
+  waitingCard: {
+    display: 'grid',
+    gridRowGap: '26px',
+    justifyItems: 'center',
+    textAlign: 'center',
+    position: 'relative',
+    marginTop: '30px',
+  },
+  waitingCardTitle: {
+    fontSize: '20px',
+    color: '#fff',
+  },
+  waitingCardTime: {
+    fontSize: '14px',
+    color: '#fff',
+  },
 });
 
-const GameCard = (props) => {
+const GameStartingCard = (props) => {
   const classes = useStyles();
+  const [show, setShow] = React.useState(false);
   const bull = <span className={classes.bullet}>•</span>;
+
+  const handleCardBodyChange = () => {
+    setShow(true);
+  };
+
+  let cardBody = (
+    <>
+      <Typography className={classes.cardbody} variant="h5" component="div">
+        <Box className={classes.cardbodyborder} component="div" m={1}>
+          5X
+          <Box className={classes.carttitle} component="div" m={1}>
+            კოეფიციენტი
+          </Box>
+        </Box>
+        <Box className={classes.cardbodyborder} component="div" m={1}>
+          <img
+            src={cardImg}
+            alt="Card img"
+            style={{ width: '100%', height: '100%' }}
+          />
+          <Box className={classes.carttitle} component="span" m={1}>
+            JAMING JARS
+          </Box>
+        </Box>
+      </Typography>
+      <Typography className={classes.cardbottom} variant="h5" component="h2">
+        <Box>
+          <Box component="span" m={3} className={classes.icon}>
+            <Icons iconStyle={classes.iconWidth} iconType="online" />
+          </Box>
+          <Box component="span" m={3}>
+            <Icons iconStyle={classes.iconWidth} iconType="online" />
+          </Box>
+          <Box component="span" m={3}>
+            <Icons iconStyle={classes.iconWidth} iconType="online" />
+          </Box>
+          <Box component="span" m={3}>
+            <Icons iconStyle={classes.iconWidth} iconType="online" />
+          </Box>
+          <Box component="span" m={3}>
+            <Icons iconStyle={classes.iconWidth} iconType="online" />
+          </Box>
+        </Box>
+        <CardActions style={{ padding: '0px' }}>
+          <Button
+            variant="contained"
+            size="large"
+            disableElevation
+            className={classes.button}
+            onClick={handleCardBodyChange}
+          >
+            დაწყება
+          </Button>
+        </CardActions>
+      </Typography>
+    </>
+  );
+
+  if (show) {
+    cardBody = (
+      <>
+        <Typography
+          className={classes.waitingCard}
+          variant="h5"
+          component="div"
+        >
+          <Typography
+            variant="h5"
+            component="h2"
+            className={classes.waitingCardTitle}
+          >
+            გთხოვთ დაელოდოთ მოწინააღდმეგეს
+          </Typography>
+          <Typography variant="h5" component="div">
+            <Box>
+              <Box component="span" m={4} className={classes.icon}>
+                <Icons iconStyle={classes.iconWidth} iconType="online" />
+              </Box>
+              <Box component="span" m={4}>
+                <Icons iconStyle={classes.iconWidth} iconType="online" />
+              </Box>
+              <Box component="span" m={4}>
+                <Icons iconStyle={classes.iconWidth} iconType="online" />
+              </Box>
+              <Box component="span" m={4}>
+                <Icons iconStyle={classes.iconWidth} iconType="offline" />
+              </Box>
+              <Box component="span" m={4}>
+                <Icons iconStyle={classes.iconWidth} iconType="offline" />
+              </Box>
+            </Box>
+          </Typography>
+          <Typography variant="h5" component="h2">
+            <Typography
+              variant="h5"
+              component="p"
+              className={classes.waitingCardTime}
+            >
+              სავარაუდო მოლოდინის დრო: 30 წამი
+            </Typography>
+            <AnimatedLine />
+          </Typography>
+        </Typography>
+        <Typography className={classes.cardbottom} variant="h5" component="h2">
+          <CardActions style={{ padding: '0px' }}>
+            <Button
+              variant="contained"
+              size="large"
+              disableElevation
+              className={classes.closeButton}
+              onClick={props.handleClose}
+            >
+              დახურვა
+            </Button>
+          </CardActions>
+        </Typography>
+      </>
+    );
+  }
 
   return (
     <Card className={props.style} variant="outlined">
@@ -141,62 +289,11 @@ const GameCard = (props) => {
               </Typography>
             </Typography>
           </Typography>
-
-          <Typography className={classes.cardbody} variant="h5" component="div">
-            <Box className={classes.cardbodyborder} component="div" m={1}>
-              5X
-              <Box className={classes.carttitle} component="div" m={1}>
-                კოეფიციენტი
-              </Box>
-            </Box>
-            <Box className={classes.cardbodyborder} component="div" m={1}>
-              <img
-                src={cardImg}
-                alt="Card img"
-                style={{ width: '100%', height: '100%' }}
-              />
-              <Box className={classes.carttitle} component="span" m={1}>
-                JAMING JARS
-              </Box>
-            </Box>
-          </Typography>
-          <Typography
-            className={classes.cardbottom}
-            variant="h5"
-            component="h2"
-          >
-            <Box>
-              <Box component="span" m={3} className={classes.icon}>
-                <Icons iconStyle={classes.iconWidth} iconType="online" />
-              </Box>
-              <Box component="span" m={3}>
-                <Icons iconStyle={classes.iconWidth} iconType="online" />
-              </Box>
-              <Box component="span" m={3}>
-                <Icons iconStyle={classes.iconWidth} iconType="online" />
-              </Box>
-              <Box component="span" m={3}>
-                <Icons iconStyle={classes.iconWidth} iconType="online" />
-              </Box>
-              <Box component="span" m={3}>
-                <Icons iconStyle={classes.iconWidth} iconType="online" />
-              </Box>
-            </Box>
-            <CardActions style={{ padding: '0px' }}>
-              <Button
-                variant="contained"
-                size="large"
-                disableElevation
-                className={classes.button}
-              >
-                დაწყება
-              </Button>
-            </CardActions>
-          </Typography>
+          {cardBody}
         </Grid>
       </CardContent>
     </Card>
   );
 };
 
-export default GameCard;
+export default GameStartingCard;
