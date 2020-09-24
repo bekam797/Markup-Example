@@ -69,6 +69,7 @@ const Main = () => {
             {' '}
           </BackDrop>
           <GameStartingCard
+            handleClose={handleClose}
             style={
               id === 3 || id === 7
                 ? [classes.root, classes.rootR].join(' ')

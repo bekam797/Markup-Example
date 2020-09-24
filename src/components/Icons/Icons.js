@@ -32,7 +32,11 @@ const Icons = (props) => (
         ? Spin
         : null
     }
-    className={props.iconType === 'online' ? props.iconStyle : ''}
+    className={
+      props.iconType === 'online' || props.iconType === 'offline'
+        ? props.iconStyle
+        : ''
+    }
     alt="svg"
   />
 );
